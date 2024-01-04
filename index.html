@@ -1,338 +1,366 @@
-<section class="hero">
-  <div class="controls">
-    <button  class="btn-custom btn-small">    <a style="color: rgb(251, 250, 248);" href="./food/Resturant.html"> Restaurant</a>   </button> <br> 
-    <button   class="btn-custom btn-small">  <a style="color: rgb(255, 254, 254);" href="Dine&Park.html"> Cooking School  </a></button>
-  <br>   <h1>Dine & Pack </h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dine & Park</title>
+</head>
+<body class="container-fluid">
+  <header class="text-center col-md-12 col-sm-12 col-xs-12">
+    <h2   style="font-size: xx-large;font-weight: 800;font-family: fantasy; color: chocolate;" >Welcome To Dine & Pack
+      <br>
+      
+    </h2>
+    <h4 id="timing"></h4>
+  </header>
+  
+  <nav class="navbar navbar-inverse col-md-4 col-sm-12 col-xs-12">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <h3 class="navbar-brand">SELECT </h3>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+  <ul class="nav navbar-nav text-center">
+      <li class="col-md-12"><a style="font-size: xx-large;font-weight: 800;font-family: fantasy; color: chocolate;" href="./food/Resturant.html"> Restaurant</a></li>
+      <li class="col-md-12"><a  style="font-size: xx-large;font-weight: 800;font-family: fantasy; color: chocolate;"   href="./Dine&Park.html">
+        Cooking School 
+      </a></li>
+      
+    </ul>
+      </div>
   </div>
-  <figure>
-    <picture>
-      <source
-        srcset="
-          
-        "
-        type="image/avif"
-      />
-      <img
-        src="ib (1).jpg"
-        alt="cyber image"
-      />
-    </picture>
-  </figure>
-</section>
+</nav>
+  <main class="text-center col-md-8 col-sm-12 col-xs-12">
+    
+    <div>
+      <ul id="menu" style='list-style-type:none !important;'>
+      </ul>
+    </div>
+  </main>
+ 
+</body>
+</html>
+
 
 <style>
-  @import "https://unpkg.com/open-props" layer(design.system);
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Water+Brush&display=swap&display=swap");
-
-@import "https://unpkg.com/open-props/normalize.dark.min.css"
-  layer(base.normalize);
-@import "https://unpkg.com/open-props/buttons.dark.min.css" layer(base.buttons);
-
-
-
-@layer base.override-normalize {
-  :root {
-    font-family: "Inter", sans-serif;
-    --brand: oklch(0.9 0.16 185.73);
-    --brand-2: oklch(0.81 0.15 177.64);
-    --cyber: oklch(0.93 0.22 121.03);
-  }
+  *{
+  box-sizing:border-box;
+  color:#fff;
 }
-
-@layer base.demo {
-  .hero {
-    block-size: 100dvh;
-    overflow-y: auto;
-
-    & figure {
-      block-size: 100dvh;
-      inset-block-start: 0;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    :is(picture, img) {
-      inline-size: 100%;
-      block-size: 100%;
-    }
-
-    & img {
-      object-position: center center;
-      object-fit: cover;
-      background: var(--gradient-8);
-    }
-  }
-
-  .controls {
-    display: grid;
-
-    inset-block-end: 12dvh;
-    inset-inline: 0;
-    justify-content: center;
-    overflow: hidden;
-    padding: var(--size-5);
-    position: absolute;
-    z-index: var(--layer-3);
-
-    & h1 {
-      font-family: "Water Brush", cursive;
-      color: var(--cyber);
-
-      font-size: clamp(7.5rem, 12vw, 12rem);
-
-      font-weight: normal;
-      text-shadow: 4px 2px 0px var(--brand-2), 8px 4px 30px var(--brand);
-      line-height: var(--font-lineheight-0);
-      font-synthesis: none;
-    }
-
-    .btn-custom {
-      --_bg: rgb(208, 22, 22);
-      --_border: black;
-      --_text: white;
-      --_ink-shadow: 0 1px 0 var(--brand);
-    }
-
-    .btn-large {
-      --_size: var(--font-size-4);
-      z-index: var(--layer-1);
-      transition: 0.2s var(--ease-2);
-      &:hover {
-        color: var(--brand);
-        box-shadow: 2px 2px 10px 5px var(--brand);
-      }
-    }
-
-    @media (width > 368px) {
-      justify-content: start;
-      justify-items: center;
-      padding-inline-start: var(--size-fluid-5);
-    }
-  }
+body{
+   background-image:url('./ib\ \(3\).jpg');
+  background-size: cover;
+  background-attachment:fixed; 
 }
-
-@layer animation.glitch {
-  @media (prefers-reduced-motion: no-preference) {
-    h1 {
-      animation: cyberpunk-glitch 7s step-end infinite,
-        skew-glitch 7s step-end infinite;
-    }
-  }
-
-  @keyframes skew-glitch {
-    0% {
-      transform: skew(83deg, 2deg) scaleY(0.25);
-    }
-    27% {
-      transform: skew(-83deg, 2deg) scaleY(0.25);
-    }
-    66% {
-      transform: skew(93deg, -2deg) scaleY(0.25);
-    }
-    91% {
-      transform: skew(-89deg, -2deg) scaleY(0.25);
-    }
-    1%,
-    28%,
-    67%,
-    92% {
-      transform: none;
-    }
-  }
-
-  /* generated! */
-  @keyframes cyberpunk-glitch {
-    0% {
-      clip-path: polygon(
-        96% 81%,
-        23% 67%,
-        3% 70%,
-        81% 58%,
-        63% 65%,
-        71% 18%,
-        60% 85%,
-        22% 27%,
-        26% 25%,
-        60% 53%,
-        79% 62%,
-        61% 6%,
-        8% 1%,
-        12% 81%,
-        12% 21%,
-        75% 7%,
-        31% 61%,
-        69% 79%,
-        41% 46%,
-        3% 7%,
-        94% 96%,
-        16% 40%,
-        10% 99%,
-        22% 67%,
-        83% 41%,
-        92% 76%
-      );
-    }
-    4% {
-      clip-path: polygon(
-        25% 86%,
-        59% 45%,
-        12% 89%,
-        25% 14%,
-        1% 82%,
-        36% 13%,
-        85% 53%,
-        59% 8%,
-        12% 76%,
-        69% 93%,
-        3% 49%,
-        74% 64%,
-        6% 87%,
-        36% 94%,
-        55% 30%,
-        53% 16%,
-        26% 39%,
-        7% 69%,
-        23% 96%,
-        83% 38%,
-        33% 25%,
-        7% 36%,
-        28% 41%,
-        27% 85%,
-        9% 77%,
-        64% 47%
-      );
-    }
-    27% {
-      clip-path: polygon(
-        39% 7%,
-        81% 81%,
-        97% 19%,
-        37% 54%,
-        19% 66%,
-        98% 57%,
-        10% 45%,
-        60% 82%,
-        10% 96%,
-        46% 53%,
-        70% 68%,
-        89% 24%,
-        6% 45%,
-        81% 29%,
-        68% 54%,
-        77% 32%,
-        90% 44%,
-        28% 36%,
-        66% 72%,
-        12% 98%,
-        83% 10%,
-        11% 71%,
-        71% 78%,
-        11% 93%,
-        50% 29%,
-        36% 36%
-      );
-    }
-    51% {
-      clip-path: polygon(
-        18% 34%,
-        31% 77%,
-        73% 57%,
-        69% 50%,
-        62% 33%,
-        34% 10%,
-        3% 66%,
-        76% 4%,
-        44% 97%,
-        43% 50%,
-        68% 3%,
-        72% 17%,
-        94% 57%,
-        46% 74%,
-        69% 17%,
-        56% 24%,
-        93% 59%,
-        10% 84%,
-        93% 76%,
-        70% 26%,
-        93% 2%,
-        84% 83%,
-        25% 4%,
-        49% 93%,
-        14% 64%,
-        31% 60%
-      );
-    }
-    66% {
-      clip-path: polygon(
-        91% 2%,
-        50% 60%,
-        51% 75%,
-        11% 27%,
-        96% 3%,
-        36% 12%,
-        22% 49%,
-        21% 75%,
-        13% 30%,
-        29% 41%,
-        2% 76%,
-        72% 52%,
-        40% 56%,
-        19% 38%,
-        32% 7%,
-        30% 34%,
-        3% 27%,
-        48% 17%,
-        1% 33%,
-        16% 41%,
-        24% 21%,
-        47% 42%,
-        16% 4%,
-        81% 91%,
-        45% 83%,
-        21% 21%
-      );
-    }
-    91% {
-      clip-path: polygon(
-        21% 73%,
-        5% 5%,
-        41% 55%,
-        3% 59%,
-        99% 94%,
-        66% 86%,
-        30% 46%,
-        69% 100%,
-        81% 83%,
-        34% 55%,
-        36% 8%,
-        2% 5%,
-        94% 91%,
-        90% 71%,
-        38% 92%,
-        55% 46%,
-        67% 68%,
-        59% 98%,
-        30% 87%,
-        22% 45%,
-        59% 76%,
-        47% 6%,
-        79% 3%,
-        20% 61%,
-        61% 96%,
-        46% 18%
-      );
-    }
-
-    1%,
-    5%,
-    28%,
-    53%,
-    67%,
-    92% {
-      clip-path: none;
-    }
-  }
+header,main{
+  background:rgba(0,0,0,0.8);
 }
-
+nav ul, .list{
+  text-align:center;
+  width:100%;
+  list-style-type:none;
+  cursor:pointer;
+}
+nav{
+  background:rgba(0,0,0,0.8) !important;
+  color:#fff !important;
+  padding:40px 0px;
+}
+nav h3{
+  color:#fff !important;
+}
+nav li{
+  text-align:center;
+  padding:45px 0px;
+  border:2.5px solid;
+}
+nav li:hover{
+  border:2.5px solid yellow;
+  color:yellow;
+  font-size:15px;
+} 
+nav li:active{
+  border:2.5px solid orange;
+  color:orange;
+  font-size:15px;
+}
+h2{
+  font-family:"papyrus";
+}
+#menu li{
+ background-size:content;
+  background-attachment:fixed;
+  padding:70px 0px;
+  border:1;
+  margin:50px 0;
+}
+#menu li{
+  cursor:pointer;
+}
+#menu li h3{
+  padding:5px;
+  display:inline-block;
+  background-color:black;
+}
+section{
+  margin:50px 0;
+  padding:30px 20px;
+  background:rgba(0,0,0,0.8);
+  font-size:17px;
+}
+footer{
+  background:black;
+  padding:25px 0px;
+  font-size:20px;
+}
 </style>
+
+<script>
+  // storing our menu inside json format
+var menu = {
+  snacks: [
+    {
+      name: "Upma",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2009/08/upma-recipe30.jpg",
+      types: ["Sooji Upma", "Whole wheat Upma", "Rice Upma", "Corn Upma"],
+      description:
+        "Upma, uppumavu or uppittu is a dish from the Indian subcontinent, most common in South Indian, Maharashtrian, and Sri Lankan Tamil breakfast; cooked as a thick porridge from dry roasted semolina or coarse rice flour. Various seasonings and/or vegetables are often added during the cooking, depending on individual preferences. Today it is popular in most parts of India and is prepared in various ways.",
+      price: "110"
+    },
+    {
+      name: "Rava Dosa",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2013/05/rava-dosa-2.jpg",
+      types: [
+        "Masala Dosa",
+        "Mysore Masala Dosa",
+        "Paper Dosa",
+        "Rava Dosa",
+        "Sada Dosa"
+      ],
+      description:
+        "Dosa is a type of pancake from the Indian subcontinent, made from a fermented batter. It is somewhat similar to a crepe in appearance. Its main ingredients are rice and black gram. Dosa is a typical part of the South Indian diet and popular all over the Indian subcontinent. Traditionally, Dosa is served hot along with sambar, stuffing of potatoes or paneer and chutney. It can be consumed with idli podi as well.",
+      price: "140"
+    },
+    {
+      name: "Idli",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2012/04/soft-idli-recipe-3.jpg",
+      types: ["Steamed Idli", "Masala Idli", "Molgapudi Idli"],
+      description:
+        "Idli is a traditional breakfast in South Indian households, where it is a popular breakfast dish. Idli is a savoury cake that is popular throughout India and neighbouring countries like Sri Lanka. The cakes are made by steaming a batter consisting of fermented black lentils (de-husked) and rice. The fermentation process breaks down the starches so that they are more readily metabolized by the body.",
+      price: "100"
+    },
+    {
+      name: "Paratha",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2010/06/plain-paratha-recipe-4.jpg",
+      types: [
+        "Aloo Paratha",
+        "Mooli Paratha",
+        "Paneer Paratha",
+        "Sattu Parathas",
+        "Channa dal Paratha"
+      ],
+      description:
+        "A paratha is a flatbread that originated in the Indian subcontinent. It is still prevalent throughout Pakistan, India, Nepal and Burma, where wheat is grown and is the traditional staple of the area. Paratha is an amalgamation of the words parat and atta which literally means layers of cooked dough.",
+      price: "30"
+    },
+    {
+      name: "Poha",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2010/07/aloo-poha-recipe21.jpg",
+      types: ["Kanda Poha", "Aloo Poha", "Sev Poha"],
+      description:
+        "Poha is the Indian name of for flattened rice. It is one of the popular easy to make Indian breakfast all over the india like kanda Poha in Maharashtra, Sev Poha in Indore Madhya Pradesh India.",
+      price: "50"
+    },
+    {
+      name: "Misal Pav",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2011/06/misal-pav-recipe-2.jpg",
+      types: [
+        "Puneri Misal",
+        "Jain Misal",
+        "Dahi Misal",
+        "Simple Misal",
+        "Phadtare Misal"
+      ],
+      description:
+        "Misal pav is a popular dish from Maharashtra, India. It consists of misal , a spicy curry usually made of sprouted moth beans and pav, a type of Indian bread roll. The final dish is topped with potato-chiwda mix, farsan or sev, onions, lemon and coriander (cilantro).It is usually served with bread or rolls toasted with butter and buttermilk or curd and papad. It is served as a breakfast dish, as a snack and also as a full meal.",
+      price: "70"
+    },
+    {
+      name: "Grilled Sandwich",
+      image: "https://recipes.timesofindia.com/photo/54714340.cms",
+      types: ["Vegitable Sandwich", "Cheese Sandwich"],
+      description:
+        "Mumbai style vegitable sandwich spiced with clinatro chutney and grilled to perfection. sandwiches are quite easy and quick to make.",
+      price: "100"
+    }
+  ],
+  mainCourse: [
+    {
+      name: "Paneer",
+      image:
+        "http://www.vegrecipesofindia.com/wp-content/uploads/2016/09/paneer-masala-recipe0.jpg",
+      types: [
+        "Paneer Makhani",
+        "Paneer Tikka",
+        "Paneer Pasanda",
+        "Paneer Chilli",
+        "Paneer Butter Masala"
+      ],
+      description:
+        "Paneer is a fresh cheese common in South Asia, especially in Indian, Pakistani, Afghan, Nepali, Sri Lankan, and Bangladeshi cuisines.",
+      price: "90"
+    },
+    {
+      name: "Sweet",
+      image:
+        "https://www.desiblitz.com/wp-content/uploads/2011/04/guide-to-indian-sweets-f.jpg",
+      types: ["Carrot Halwa", "Lauki Halwa", "Gulab Jamun", "Rosh Gulla"],
+      description:
+        "Indian sweets or deserts, also called Mithai, a significant element in Indian cuisine.",
+      price: "50"
+    },
+    {
+      name: "Dal Bati",
+      image:
+        "http://www.ruchiskitchen.com/wp-content/uploads/2014/11/Dal-Bati-recipe.jpg",
+      types: ["Bati Churma(Sweet)", "Normal Dal Bati"],
+      description:
+        "This dish is from the cuisine of Rajasthan in Western India. Dal Baati is more popular and specially made on some occasions. The Baati usually roast in an open coal fire but you can also cook them under a grill or in your oven. But I have cooked in gas oven not electric oven. Daal is basically prepared from tuvar daal or red lentil  and Baati is basically a hard bread made up of wheat powder commonly known as aata. Baati Chokha is usually served with fried tuvar daal and Baigan bharta.",
+      price: "70"
+    },
+    {
+      name: "Bhaji Pav",
+      image: "https://www.ndtv.com/cooks/images/pav.bhaji%20%281%29.jpg",
+      types: ["Cheese Bhaji Pav", "Butter Bhaji Pav", "Garlic Bhaji Pav"],
+      description:
+        "Pav bhaji is a fast food dish from Maharashtra, India, consisting of a thick vegetable curry (Marathi: bhaji) fried and served with a soft bread roll ",
+      price: "80"
+    },
+    {
+      name: "Chole",
+      image:
+        "https://i0.wp.com/files.hungryforever.com/wp-content/uploads/2016/10/18160841/best-chole-bhature-in-mumbai.jpg?fit=1600%2C993",
+      types: ["Chole Bhature", "Chana Masala"],
+      description:
+        "Bhature chole, a dish from the Punjabi cuisine, is a combination of chana masala (spicy white chickpeas) and bhatura, a fried bread made from maida flour (soft wheat).",
+      price: "50"
+    }
+  ]
+};
+
+// The Time Logic
+var timings = document.getElementById("timing");
+var days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+var d = new Date();
+var day = d.getDay();
+var h = d.getHours();
+var disp_time = "";
+var status = "open";
+if (day != 0 && day != 6) {
+  disp_time = "9AM-10PM";
+} else {
+  disp_time = "8AM-11PM";
+}
+timings.innerHTML = "Open hours for " + days[day] + ": " + disp_time;
+
+if (h < 8 || h > 21) {
+  timings.innerHTML += " <small style='color:red;'>Closed</small>";
+  status = "closed";
+} else {
+  status.innerHTML = " <small style='color:green;'>Open</small>";
+}
+// Time logic ended
+
+// type logic started
+var menuType = "";
+$("nav li").on("click", function() {
+  menuType = this.innerHTML;
+  var menuDiv = document.getElementById("menu");
+  menuDiv.innerHTML = "";
+  if (menuType == "BREAKFAST or TEATIME") {
+    for (var i = 0; i < menu["snacks"].length; i++) {
+      var tmp = "";
+      for (var j = 0; j < menu["snacks"][i]["types"].length; j++) {
+        tmp +=
+          "<li style='padding:0px;border:0;margin:0;'>" +
+          menu["snacks"][i]["types"][j] +
+          "</li>";
+      }
+
+      menuDiv.innerHTML +=
+        "<li onclick='wide(" +
+        "snack" +
+        i +
+        ")' style='background-image:url(" +
+        menu["snacks"][i]["image"] +
+        ");'><h3>" +
+        menu["snacks"][i]["name"] +
+        "</h3><section class='text-left hide' id='snack" +
+        i +
+        "'><div><strong class='h4'>Description:</strong> " +
+        menu["snacks"][i]["description"] +
+        "</div>Options:<ol>" +
+        tmp +
+        "</ol><span class='text-right'>Price: " +
+        menu["snacks"][i]["price"] +
+        "/- </span></section></li>";
+    }
+  } else {
+    // Dinner or Lunch!!
+    for (var k = 0; k < menu["mainCourse"].length; k++) {
+      var tmp1 = "";
+      for (var l = 0; l < menu["mainCourse"][k]["types"].length; l++) {
+        tmp1 +=
+          "<li style='padding:0px;border:0;margin:0;'>" +
+          menu["mainCourse"][k]["types"][l] +
+          "</li>";
+      }
+
+      menuDiv.innerHTML +=
+        "<li onclick='wide(" +
+        "main" +
+        k +
+        ")' style='background-image:url(" +
+        menu["mainCourse"][k]["image"] +
+        ");'><h3>" +
+        menu["mainCourse"][k]["name"] +
+        "</h3><section class='text-left hide' id='main" +
+        k +
+        "'><div><strong class='h4'>Description:</strong> " +
+        menu["mainCourse"][k]["description"] +
+        "</div>Options:<ol>" +
+        tmp1 +
+        "</ol><span class='text-right'>Price: " +
+        menu["mainCourse"][k]["price"] +
+        "/- </span></section></li>";
+    }
+  }
+});
+
+function wide(index) {
+  //alert(index);
+  let i = index;
+  $(i).removeClass("hide");
+  $(i).slideToggle();
+}
+
+</script>
