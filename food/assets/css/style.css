@@ -631,7 +631,7 @@ a.navbar-brand.our_logo{
 /* slider section */
 
 .slider{
-	background:url(../images/vv\ \(3\).jpg) center center no-repeat;
+	background:url(./p\ \(21\).JPG) center center no-repeat;
 	background-size:cover;
 }
 .main_slider {
@@ -662,10 +662,10 @@ font-size: 6rem;
 /* Abouts Section css */
 
 .abouts{
-	 background: url(../images/abtbg.jpg) no-repeat center top scroll;
+	 background: url(./v2.webp) no-repeat center top scroll;
   -moz-background-size: cover;
   -webkit-background-size: cover;
-  -o-background-size: cover;
+  
   background-size: cover;
   width: 100%;
   overflow: hidden;
@@ -684,7 +684,7 @@ font-size: 6rem;
 
 /* Features section css */
 .features{
-	background:url(../images/wood.jpg) center center no-repeat;
+	background:url(./b6.jpg) center center no-repeat;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -697,7 +697,7 @@ font-size: 6rem;
 	display:inline-block;
 }
 .main_features_content{
-	background:url(../images/bb5.jpg) right center no-repeat;
+	background:url() right center no-repeat;
 	padding:40px;
 	overflow:hidden;
 }
@@ -710,7 +710,7 @@ font-size: 6rem;
 
 /* Portfolio Section css */
 .portfolio{
-	background:url(../images/wood.jpg) center top no-repeat;
+	background:url(./v1.webp) center top no-repeat;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -803,7 +803,7 @@ font-size: 6rem;
 }
 
 .single_pakeg_one{
-	background:url(../images/bb3.jpg) left center no-repeat;
+	background:url() left center no-repeat;
 	padding:30px;
 	overflow:hidden;
 	margin-top:60px;
@@ -823,7 +823,7 @@ font-size: 6rem;
 	
 }
 .single_pakeg_thre{
-	background:url(../images/newsone.jpg) left center no-repeat;
+	background:url(./v1.webp) left center no-repeat;
 	padding:30px;	
 	overflow:hidden;
 	margin-top:60px;	
@@ -837,7 +837,7 @@ font-size: 6rem;
 }
 
 .single_pakeg_text ul li{
-    background: url(../images/lo.png) no-repeat left center;
+    background: url(./v2.webp) no-repeat left center;
     padding: 15px 0px 15px 60px;
     margin-top: 20px;
     height: 1cm;
@@ -848,7 +848,7 @@ font-size: 6rem;
 /* Mobail Apps Section css */
 
 .mobailapps{
-	background:url(../images/appsbg.jpg) top center no-repeat scroll;
+	background:url(./v1.webp) top center no-repeat scroll;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -900,7 +900,7 @@ font-size: 6rem;
 
 /* Footer Section CSS */
 .footer_widget{
-	background:url(../images/footerbg.jpg) center top no-repeat scroll;
+	background:url(./v2.webp) center top no-repeat scroll;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
